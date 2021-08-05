@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #F2CC0B; 
+    transition: 1s;
+    overflow: hidden;
+   
+}
+
+.circle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.circle{
+    border: 10px solid #ffffff21;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    opacity: 1;
+    margin-left: -4%;
+    transform: scale(20); 
+    animation: circleAnimate 25s 1 linear normal; 
+    z-index: 0;
+    pointer-events: none;
+}
+
+@keyframes circleAnimate{
+    0%{transform: scale(0);}
+    99%{transform: scale(20);}
+    100%{opacity: 0;}
+}

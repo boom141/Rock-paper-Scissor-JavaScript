@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="frame"><img src="asset/frame.png" alt=""></div>
+    <div class="charname"><img src="asset/CharName.png" alt=""></div>
+    <div class="healthBar1">
+        <div class="life1"></div></div>
+    <div class="healthBar2">
+        <div class="life2"></div></div>
+    <div class="nullBet"></div>
+    <div class="nullBet"></div>
+    <button onclick="Shoot()" class="Shoot">SHOOT!</button>
+        
+    <button onclick="Choose()" class="readyp1">PLACE A HAND</button>
+    <button class="readyp2">READY</button>
+
+    <div class="timer">
+    <div class="TimeLimit">PLACE A HAND IN : 10</div>
+    <div class="betContainer">
+        <div class="bet"><img  class="Bet" src="asset/Rock-hand.png" alt=""></div>
+        <div class="bet"><img  class="Bet" src="asset/Paper-hand.png" alt=""></div>
+        <div class="bet"><img  class="Bet" src="asset/Scissor-hand.png" alt=""></div>
+    </div>
+    </div>
+    <div class="Winner"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <script src="test.js"></script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box; 
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F2CC0B; 
+    transition: 1s;
+    overflow: hidden;
+}
+.player{
+    margin-top: 15%;
+}
+span{
+    height: 20px;
+    width: 20px;
+}
+
+.charSize1{
+    height: 200px;
+    width: 200px;
+}
+
+.betContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    margin-top: 55vh;
+    margin-left: 37.5%;
+    padding-top: 5px;
+    overflow: hidden;
+}
+
+.bet img{
+    height: 100px;
+    width: 100px;
+    transition: 0.1s;
+    cursor: pointer;
+    animation: AnimationName 0.1s 1 linear normal;
+}
+
+ .bet img:hover{
+    transform:scale(1.1)
+}
+
+.frame, .charname, .nullBet1, .nullBet2, .healthBar1, .healthBar2, 
+.readyp1, .readyp2, .Shoot{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 0;
+}
+.frame img{
+    height: 200px;
+    width: 500px; 
+    z-index: 5;
+}
+.charname{
+    top: 15%;
+    z-index: 10;
+}
+.charname img{  
+    height: 100px;
+    width: 200px; 
+}
+
+.nullBet1, .nullBet2{
+    height: 100px;
+    width: 100px;
+}
+.nullBet1{
+    left: 38%;
+}
+.nullBet2{
+    left: 62%;
+}
+
+.healthBar1, .healthBar2{
+    top: -7%;
+    left: 19.3%;
+    height: 150px;
+    width: 300px;
+    background: rgba(0, 0, 0, 0.288);
+    transform: scaleX(-1);
+    clip-path: polygon(1% 76%, 100% 53%, 100% 100%, 0% 100%);
+}
+.healthBar2{
+    left: 55.5%;
+    transform: scaleX(1);
+    clip-path: polygon(3% 76%, 100% 53%, 100% 100%, 0% 100%);
+
+}
+.life1, .life2{
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    transition: 1s ease;
+    height: 150px;
+    width: 300px;
+}
+.life2{
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+}
+
+.timer{
+    background: #0000007e;
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s ease-in-out;
+    z-index: 10;
+}
+
+.TimeLimit, .circle{ 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.TimeLimit{
+    top: 35%;
+    font-size: 60px;
+    color: #fdfdfd;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.circle{
+    height: 200px;
+    width: 200px;
+    border: 7px solid white;
+    border-radius: 50%;
+}
+
+
+
+.readyp1{
+    top: 75%;
+    left: 38%;
+    height: 50px;
+    width: 150px;
+    border-radius: 5%;
+    font-size: 18px;
+    cursor: pointer;
+    outline: none;
+    border-color: #ff416c;
+    color: white;
+    background: #ff416c;
+   
+}
+
+.IconSize { 
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    top: 10px;
+    left: 100px;
+}
+
+.readyp2{
+    top: 75%;
+    left: 62%;
+    height: 50px;
+    width: 150px;
+    border-radius: 5%;
+    font-size: 18px;
+    outline: none;
+    border-coloR: rgb(28, 255, 225);
+    color: white;
+    background: rgb(28, 255, 225);
+}
+
+.Shoot{
+    top: 90%;
+    height: 50px;
+    width: 200px;
+    font-size: 40px;
+    color: grey;
+    outline: none; 
+    cursor: pointer;
+    background: none;
+    border: 2px solid grey;
+    pointer-events: none;
+    animation: boom 1s infinite linear alternate;
+}
+.circle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.circle{
+    border: 10px solid #ffffff21;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    opacity: 1;
+    margin-left: -4%;
+    transform: scale(20); 
+    animation: circleAnimate 25s 1 linear normal; 
+    z-index: 0;
+    pointer-events: none;
+}
+
+.Winner{
+    background: #0000007e;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    font-size: 60px;
+    color: #fdfdfd;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    z-index: 10;
+}
+@keyframes circleAnimate{
+    0%{transform: scale(0);}
+    99%{transform: scale(20);}
+    100%{opacity: 0;}
+}
+
+@keyframes ClickAnimate {
+    0%{ transform: scale(1);}
+    100%{transform: scale(1.1);}
+}
+
+@keyframes ButtonAnimate {
+    0%{ transform: scale(1);}
+    100%{transform: scale(1.2);}
+}
